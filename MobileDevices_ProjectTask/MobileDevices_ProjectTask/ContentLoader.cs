@@ -95,6 +95,8 @@ namespace MobileDevices_ProjectTask
             return await Task.Run(() =>
             {
                 List<StackLayout> results = new List<StackLayout>();
+                results.Clear();
+
                 uint counter = 0;
 
                 switch (baseForm)

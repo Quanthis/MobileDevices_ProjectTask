@@ -11,7 +11,7 @@
     <ScrollView>
         <StackLayout x:Name="MainLayout" Orientation="Vertical" Margin="20">
 
-            <StackLayout x:Name="CheckBoxLayout" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+            <StackLayout x:Name="RadioButtonLayout" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
                 
                 <RadioButton Text="Infinitive" HorizontalOptions="FillAndExpand" CheckedChanged="Enable_InfitiveBase"/>
                 <RadioButton Text="Past tense" HorizontalOptions="FillAndExpand" CheckedChanged="Enable_PastTenseBase"/>
