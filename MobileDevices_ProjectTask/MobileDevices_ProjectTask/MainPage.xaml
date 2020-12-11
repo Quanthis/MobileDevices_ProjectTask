@@ -13,15 +13,15 @@
 
             <StackLayout x:Name="RadioButtonLayout" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
                 
-                <RadioButton x:Name="RB_Infinitive" Text="Infinitive" HorizontalOptions="FillAndExpand" CheckedChanged="Enable_InfitiveBase"/>
-                <RadioButton x:Name="RB_PastTense" Text="Past tense" HorizontalOptions="FillAndExpand" CheckedChanged="Enable_PastTenseBase"/>
-                <RadioButton x:Name="RB_PastParticiple" Text="Participle" HorizontalOptions="FillAndExpand" CheckedChanged="Enable_PastParticipleBase"/>
+                <RadioButton x:Name="RB_Infinitive" Text="Infinitive" HorizontalOptions="FillAndExpand" CheckedChanged="Enable_InfitiveBase" TextColor="Black"/>
+                <RadioButton x:Name="RB_PastTense" Text="Past tense" HorizontalOptions="FillAndExpand" CheckedChanged="Enable_PastTenseBase" TextColor="Black"/>
+                <RadioButton x:Name="RB_PastParticiple" Text="Participle" HorizontalOptions="FillAndExpand" CheckedChanged="Enable_PastParticipleBase" TextColor="Black"/>
 
             </StackLayout>
 
             <StackLayout x:Name="Buttons" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
-                <Button x:Name="TestButton" Text="Test" Clicked="PerformCheck" HorizontalOptions="FillAndExpand" BackgroundColor="White" IsEnabled="False"/>
-                <Button Text="Reset" Clicked="ReloadPage" HorizontalOptions="FillAndExpand" BackgroundColor="White"/>
+                <Button x:Name="TestButton" Text="Test" Clicked="PerformCheck" HorizontalOptions="FillAndExpand" BackgroundColor="White" IsEnabled="False" TextColor="Black"/>
+                <Button Text="Reset" Clicked="ReloadPage" HorizontalOptions="FillAndExpand" BackgroundColor="White" TextColor="Black"/>
             </StackLayout>
 
             <StackLayout x:Name="Verbs" Orientation="Vertical">
