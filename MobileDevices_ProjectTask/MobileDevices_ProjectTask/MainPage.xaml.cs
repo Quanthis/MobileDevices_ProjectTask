@@ -25,6 +25,8 @@ namespace MobileDevices_ProjectTask
 
         private async void PerformCheck(object sender, EventArgs e)
         {
+            DisableAllRadios();
+
             uint indexer = 0;
             string input1 = "";
             string input2 = "";
@@ -43,6 +45,8 @@ namespace MobileDevices_ProjectTask
                         {
                             input2 = element.Text;
                         }
+
+                        element.IsReadOnly = true;
                     }
 
                     if(await content.GetFVWords()[(int)indexer].CheckIfWordSpelledCorrectly(FVWord.WordGiven.infinitive, input1, input2))
@@ -55,8 +59,61 @@ namespace MobileDevices_ProjectTask
                     }
                 }
 
+                else if(RB_PastTense.IsChecked)
+                {
+                    foreach (Entry element in item.Children)
+                    {
+                        if (element.AutomationId == $"MainPageInfinitiveNo{indexer}")
+                        {
+                            input1 = element.Text;
+                        }
+                        else if (element.AutomationId == $"MainPagePastParticipleNo{indexer}")
+                        {
+                            input2 = element.Text;
+                        }
+
+                        element.IsReadOnly = true;
+                    }
+
+                    if (await content.GetFVWords()[(int)indexer].CheckIfWordSpelledCorrectly(FVWord.WordGiven.pastTense, input1, input2))
+                    {
+                        item.BackgroundColor = Color.Green;
+                    }
+                    else
+                    {
+                        item.BackgroundColor = Color.Red;
+                    }
+                }
+
+                else if(RB_PastParticiple.IsChecked)
+                {
+                    foreach (Entry element in item.Children)
+                    {
+                        if (element.AutomationId == $"MainPageInfinitiveNo{indexer}")
+                        {
+                            input1 = element.Text;
+                        }
+                        else if (element.AutomationId == $"MainPagePastTenseNo{indexer}")
+                        {
+                            input2 = element.Text;
+                        }
+
+                        element.IsReadOnly = true;
+                    }
+
+                    if (await content.GetFVWords()[(int)indexer].CheckIfWordSpelledCorrectly(FVWord.WordGiven.pastParticiple, input1, input2))
+                    {
+                        item.BackgroundColor = Color.Green;
+                    }
+                    else
+                    {
+                        item.BackgroundColor = Color.Red;
+                    }
+                }
+
                 ++indexer;
             }
+            indexer = 0;
         }
 
         private async void ReloadPage(object sender, EventArgs e)
