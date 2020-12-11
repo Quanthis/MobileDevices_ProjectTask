@@ -13,9 +13,9 @@
 
             <StackLayout x:Name="CheckBoxLayout" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
                 
-                <RadioButton Text="Infinitive" HorizontalOptions="FillAndExpand"/>
-                <RadioButton Text="Past tense" HorizontalOptions="FillAndExpand"/>
-                <RadioButton Text="Participle" HorizontalOptions="FillAndExpand"/>
+                <RadioButton Text="Infinitive" HorizontalOptions="FillAndExpand" CheckedChanged="Enable_InfitiveBase"/>
+                <RadioButton Text="Past tense" HorizontalOptions="FillAndExpand" CheckedChanged="Enable_PastTenseBase"/>
+                <RadioButton Text="Participle" HorizontalOptions="FillAndExpand" CheckedChanged="Enable_PastParticipleBase"/>
 
             </StackLayout>
 
