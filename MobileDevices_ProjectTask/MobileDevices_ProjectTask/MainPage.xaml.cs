@@ -25,7 +25,38 @@ namespace MobileDevices_ProjectTask
 
         private async void PerformCheck(object sender, EventArgs e)
         {
+            uint indexer = 0;
+            string input1 = "";
+            string input2 = "";
 
+            foreach(StackLayout item in Verbs.Children)
+            {
+                if(RB_Infinitive.IsChecked)
+                {
+                    foreach(Entry element in item.Children)
+                    {
+                        if(element.AutomationId == $"MainPagePastTenseNo{indexer}")
+                        {
+                            input1 = element.Text;
+                        }
+                        else if(element.AutomationId == $"MainPagePastParticipleNo{indexer}")
+                        {
+                            input2 = element.Text;
+                        }
+                    }
+
+                    if(await content.GetFVWords()[(int)indexer].CheckIfWordSpelledCorrectly(FVWord.WordGiven.infinitive, input1, input2))
+                    {
+                        item.BackgroundColor = Color.Green;
+                    }
+                    else
+                    {
+                        item.BackgroundColor = Color.Red;
+                    }
+                }
+
+                ++indexer;
+            }
         }
 
         private async void ReloadPage(object sender, EventArgs e)

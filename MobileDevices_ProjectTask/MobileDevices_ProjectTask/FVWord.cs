@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 
 namespace MobileDevices_ProjectTask
 {
-    public class FVWord  //FVWord - full varation word
+    public class FVWord                              //FVWord - full varation word
     {
         public readonly string infinitive;
         public readonly string pastTense;
