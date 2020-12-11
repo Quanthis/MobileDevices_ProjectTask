@@ -127,6 +127,7 @@ namespace MobileDevices_ProjectTask
             Verbs.Children.Clear();
             Verbs.ForceLayout();
             DisableAllRadios();
+            TestButton.IsEnabled = true;
 
             foreach (var item in await content.Fill_Partially(FVWord.WordGiven.infinitive))
             {
@@ -139,6 +140,7 @@ namespace MobileDevices_ProjectTask
             Verbs.Children.Clear();
             Verbs.ForceLayout();
             DisableAllRadios();
+            TestButton.IsEnabled = true;
 
             foreach (var item in await content.Fill_Partially(FVWord.WordGiven.pastTense))
             {
@@ -151,6 +153,7 @@ namespace MobileDevices_ProjectTask
             Verbs.Children.Clear();
             Verbs.ForceLayout();
             DisableAllRadios();
+            TestButton.IsEnabled = true;
 
             foreach (var item in await content.Fill_Partially(FVWord.WordGiven.pastParticiple))
             {

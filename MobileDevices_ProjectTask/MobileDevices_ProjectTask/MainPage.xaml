@@ -20,8 +20,8 @@
             </StackLayout>
 
             <StackLayout x:Name="Buttons" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
-                <Button Text="Test" Clicked="PerformCheck" HorizontalOptions="FillAndExpand"/>
-                <Button Text="Reset" Clicked="ReloadPage" HorizontalOptions="FillAndExpand"/>
+                <Button x:Name="TestButton" Text="Test" Clicked="PerformCheck" HorizontalOptions="FillAndExpand" BackgroundColor="White" IsEnabled="False"/>
+                <Button Text="Reset" Clicked="ReloadPage" HorizontalOptions="FillAndExpand" BackgroundColor="White"/>
             </StackLayout>
 
             <StackLayout x:Name="Verbs" Orientation="Vertical">
