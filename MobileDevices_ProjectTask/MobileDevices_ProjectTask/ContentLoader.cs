@@ -17,17 +17,52 @@ namespace MobileDevices_ProjectTask
 
         private List<FVWord> GenerateFVWords()
         {
-            List <FVWord> fVWords = new List<FVWord>();
+            List<FVWord> fVWords = new List<FVWord>
+            {
+                new FVWord("arise", "arose", "arisen"),
+                new FVWord("awake", "awoke", "awoken"),
 
-            fVWords.Add(new FVWord("arise", "arose", "arisen"));
-            fVWords.Add(new FVWord("awake", "awoke", "awoken"));
-            fVWords.Add(new FVWord("become", "became", "become"));
-            fVWords.Add(new FVWord("begin", "began", "begun"));
-            fVWords.Add(new FVWord("break", "brokre", "broken"));
-            fVWords.Add(new FVWord("bring", "brought", "brought"));
-            fVWords.Add(new FVWord("build", "built", "built"));
-            fVWords.Add(new FVWord("buy", "bought", "bought"));
-            fVWords.Add(new FVWord("catch", "caught", "caught"));
+                new FVWord("become", "became", "become"),
+                new FVWord("begin", "began", "begun"),
+                new FVWord("bear", "bore", "borne"),
+                new FVWord("break", "broke", "broken"),
+                new FVWord("beat", "beat", "beaten"),
+                new FVWord("bend", "bent", "bent"),
+                new FVWord("beset" , "beset", "beset"),
+                new FVWord("bet", "bet", "bet"),
+                new FVWord("bid", "bid", "bid"),
+                new FVWord("bind", "bound", "bound"),
+                new FVWord("bite", "bit", "bitten"),
+                new FVWord("bleed", "bled", "bled"),
+                new FVWord("blow", "blew", "blown"),
+                new FVWord("breed", "bred", "bred"),
+                new FVWord("bring", "brought", "brought"),
+                new FVWord("broadcast", "broadcast", "broadcast"),
+                new FVWord("build", "built", "built"),
+                new FVWord("burn", "burnt", "burnt"),
+                new FVWord("burst", "burst", "burst"),
+                new FVWord("buy", "bought", "bought"),
+
+                new FVWord("cast", "cast", "cast"),
+                new FVWord("catch", "caught", "caught"),
+                new FVWord("choose", "chose", "chosen"),
+                new FVWord("cling", "clung", "clung"),
+                new FVWord("come", "came", "come"),
+                new FVWord("cost", "cost", "cost"),
+                new FVWord("creep", "crept", "crept"),
+                new FVWord("cut", "cut", "cut"),
+
+                new FVWord("deal", "dealt", "dealt"),
+                new FVWord("dig", "dug", "dug"),
+                new FVWord("dive", "dove", "dived"),
+                new FVWord("do", "did", "done"),
+                new FVWord("draw", "drew", "drawn"),
+                new FVWord("dream", "dreamt", "dreamt"),
+                new FVWord("drink", "drank", "drunk"),
+                new FVWord("drive", "drowe", "driven"),
+
+                new FVWord("eat", "ate", "eaten")
+            };
 
             return fVWords;
         }

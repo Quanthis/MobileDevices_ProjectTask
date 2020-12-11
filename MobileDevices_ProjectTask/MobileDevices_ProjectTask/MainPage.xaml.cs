@@ -124,9 +124,10 @@ namespace MobileDevices_ProjectTask
 
         private async void Enable_InfitiveBase(object sender, EventArgs e)
         {
+            DisableRadio();         //because it has 1st index of RadioButtons it seems it must call this method synchronusly
+
             Verbs.Children.Clear();
             Verbs.ForceLayout();
-            DisableAllRadios();
             TestButton.IsEnabled = true;
 
             foreach (var item in await content.Fill_Partially(FVWord.WordGiven.infinitive))
@@ -137,9 +138,9 @@ namespace MobileDevices_ProjectTask
 
         private async void Enable_PastTenseBase(object sender, EventArgs e)
         {
+            DisableAllRadios();
             Verbs.Children.Clear();
             Verbs.ForceLayout();
-            DisableAllRadios();
             TestButton.IsEnabled = true;
 
             foreach (var item in await content.Fill_Partially(FVWord.WordGiven.pastTense))
@@ -150,9 +151,9 @@ namespace MobileDevices_ProjectTask
 
         private async void Enable_PastParticipleBase(object sender, EventArgs e)
         {
+            DisableAllRadios();
             Verbs.Children.Clear();
             Verbs.ForceLayout();
-            DisableAllRadios();
             TestButton.IsEnabled = true;
 
             foreach (var item in await content.Fill_Partially(FVWord.WordGiven.pastParticiple))
@@ -170,6 +171,14 @@ namespace MobileDevices_ProjectTask
                     element.IsEnabled = false;
                 }
             });
+        }
+
+        private void DisableRadio()
+        {
+            foreach (var element in RadioButtonLayout.Children)
+            {
+                element.IsEnabled = false;
+            }
         }
     }
 }

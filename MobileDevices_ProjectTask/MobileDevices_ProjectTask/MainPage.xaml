@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MobileDevices_ProjectTask.MainPage"
-             BackgroundColor="LightGray">
+             BackgroundColor="Gray">
 
     <NavigationPage.TitleView>
         <Label Text="English Test" TextColor="White" FontSize="Large" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
