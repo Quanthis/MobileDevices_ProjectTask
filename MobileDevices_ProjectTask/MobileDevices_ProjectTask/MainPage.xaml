@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileDevices_ProjectTask.MainPage"
+             BackgroundColor="LightGray">
+
+    <NavigationPage.TitleView>
+        <Label Text="English Test" TextColor="White" FontSize="Large" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+    </NavigationPage.TitleView>
+
+    <ScrollView>
+        <StackLayout x:Name="MainLayout" Orientation="Vertical" Margin="20">
+
+            <StackLayout x:Name="CheckBoxLayout" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                
+                <RadioButton Text="Infinitive" HorizontalOptions="FillAndExpand"/>
+                <RadioButton Text="Past tense" HorizontalOptions="FillAndExpand"/>
+                <RadioButton Text="Participle" HorizontalOptions="FillAndExpand"/>
+
+            </StackLayout>
+
+            <StackLayout x:Name="Buttons" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                <Button Text="Test" Clicked="PerformCheck" HorizontalOptions="FillAndExpand"/>
+                <Button Text="Reset" Clicked="ReloadPage" HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
+
+            <StackLayout x:Name="Verbs" Orientation="Vertical">
+                
+                
+                
+            </StackLayout>
+
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>
