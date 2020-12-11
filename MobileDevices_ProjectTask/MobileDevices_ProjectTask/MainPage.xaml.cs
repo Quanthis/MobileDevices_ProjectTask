@@ -10,10 +10,20 @@ namespace MobileDevices_ProjectTask
 {
     public partial class MainPage : ContentPage
     {
+        private ContentLoader content;
+
         public MainPage()
         {
             InitializeComponent();
+            content = new ContentLoader();
+            
+            foreach(var item in content.Fill_Full())
+            {
+                Verbs.Children.Add(item);
+            }
         }
+
+        
 
         private async void PerformCheck(object sender, EventArgs e)
         {

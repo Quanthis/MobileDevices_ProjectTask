@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Xamarin.Forms;
 
 namespace MobileDevices_ProjectTask
 {
@@ -28,6 +29,64 @@ namespace MobileDevices_ProjectTask
             fVWords.Add(new FVWord("catch", "caught", "caught"));
 
             return fVWords;
+        }
+
+        public List<FVWord> GetFVWords()
+        {
+            return fVWords;
+        }
+
+        public List<StackLayout> Fill_Full()
+        {
+            List<StackLayout> results = new List<StackLayout>();
+            uint counter = 0;
+
+            foreach (var element in fVWords)
+            {
+                Entry infinitive = new Entry
+                {
+                    Text = element.infinitive,
+                    HorizontalOptions = LayoutOptions.Start,
+                    WidthRequest = 125,
+                    IsReadOnly = true,
+                    AutomationId = $"MainPageInfinitiveNo{counter}"
+                };
+
+                Entry tense = new Entry
+                {
+                    Text = element.pastTense,
+                    HorizontalOptions = LayoutOptions.Center,
+                    WidthRequest = 125,
+                    IsReadOnly = true,
+                    AutomationId = $"MainPagePastTenseNo{counter}"
+                };
+
+                Entry participle = new Entry
+                {
+                    Text = element.pastParticiple,
+                    HorizontalOptions = LayoutOptions.End,
+                    WidthRequest = 125,
+                    IsReadOnly = true,
+                    AutomationId = $"MainPagePastParticipleNo{counter}"
+                };
+
+                StackLayout stackLayout = new StackLayout
+                {
+                    Orientation = StackOrientation.Horizontal,
+                    HorizontalOptions = LayoutOptions.FillAndExpand,
+                    AutomationId = $"MainPageStackLayoutNo{counter}"
+                };
+
+                stackLayout.Children.Add(infinitive);
+                stackLayout.Children.Add(tense);
+                stackLayout.Children.Add(participle);
+
+                results.Add(stackLayout);
+
+                ++counter;
+            }
+
+            return results;
         }
     }
 }
